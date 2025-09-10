@@ -1,2 +1,3 @@
 # C-Programming-Lab
-This Repository has benn created to let the people know its for C Programming 
+This repository contains C programming lab exercises, practice problems, and solutions.It is designed to help people learn the basics of C programming step by step.
+Which would be beneficial too them in the upcoming future
