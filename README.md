@@ -8,4 +8,4 @@ This repository contains C programming lab exercises, practice problems, and sol
 - Java
 - JavaScript
 
- [PF Lab Tasks 4-10]("C:\Users\Owner\Desktop\Ali Naqi\PF Lab4-Tasks(4-10).docx").
+ PF Lab Tasks [4-10]("C:\Users\Owner\Desktop\Ali Naqi\PF Lab4-Tasks(4-10).docx").
