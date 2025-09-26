@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+  int a,b;
+  printf("Enter Number 1: ");
+  scanf("%d",&a);
+  printf("Enter Number 2: ");
+  scanf("%d",&b);
+  
+  printf("Fiirst the operation in brackets will be executed: %d", (a-b));
+  printf("\nSecond it will multiply the answer from bracket with b: %d",b*(a-b));
+  printf("\nThird it will divide the answer from second step will be divied by 2: %d", b*(a-b)/2);
+  printf("\nAt the last the answer from the third step will be added with a: %d", a+b*(a-b)/2);
+  return 0;
+}
