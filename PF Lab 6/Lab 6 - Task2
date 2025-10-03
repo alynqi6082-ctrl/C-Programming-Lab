@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, j, Prime, count = 0, sum = 0;
+
+    printf("Enter a number n: ");
+    scanf("%d", &n);
+
+    for (i = 2; i <= n; i++) {
+        Prime = 1; 
+        for (j = 2; j * j <= i; j++) {
+            if (i % j == 0) {
+                Prime = 0;
+                break;
+            }
+        }
+        if (Prime) {
+            printf("%d ", i);
+            count++;
+            sum += i;
+        }
+    }
+
+    printf("\nTotal primes: %d\n", count);
+    printf("Sum of primes: %d\n", sum);
+
+    return 0;
+}
+
