@@ -1,1 +1,29 @@
 
+#include <stdio.h>
+
+int main() {
+    int num, eCount = 0, oCount = 0;
+    char choice;
+
+    do {
+        printf("Enter a number: ");
+        scanf("%d", &num);
+
+        if (num % 2 == 0) {
+            printf("%d is Even.\n", num);
+            eCount++;
+        } else {
+            printf("%d is Odd.\n", num);
+            oCount++;
+        }
+
+        printf("Do you want to continue? (y for yes / n for no): ");
+        scanf(" %c", &choice);  // space before %c eats newline
+    } while (choice == 'y' || choice == 'Y');
+
+    printf("\nTotal Even numbers: %d\n", eCount);
+    printf("Total Odd numbers: %d\n", oCount);
+
+    return 0;
+}
+
