@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main(){
+	int num,Lnum,Snum,f=1;
+	char choice;
+	do{
+		printf("Enter a number:");
+		scanf("%d",&num);
+		
+		if(f)
+		Lnum=Snum=num;
+		f=0;
+		
+		if(num > Lnum)
+		Lnum=num;
+		
+		if(num < Snum)
+		Snum=num;
+		
+		printf("Largest so far: %d\n", Lnum);
+        printf("Smallest so far: %d\n", Snum);
+        
+        printf("Do you want me to continue(Y/N):");
+        scanf(" %c",&choice);
+	}
+	while(choice == 'y' || choice == 'Y');
+	
+	printf("Largest Number is: %d\n",Lnum );
+	printf("Smallest Number is: %d",Snum );
+	
+	return 0;
+}
