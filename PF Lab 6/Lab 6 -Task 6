@@ -1,0 +1,39 @@
+#include <stdio.h>
+int main() {
+    int grade, total = 0;
+    int count = 0;
+    int above70 = 0, between50_70 = 0, below50 = 0;
+
+    while (1) {
+        printf("Enter a grade (0-100): ");
+        scanf("%d", &grade);
+
+        if (grade == -1)
+            break; 
+
+        printf("Grade entered: %d\n", grade);
+
+        total += grade;
+        count++;
+
+        if (grade > 70)
+            above70++;
+        else if (grade >= 50)
+            between50_70++;
+        else
+            below50++;
+    }
+    if (count > 0) {
+        float average = total / count;
+        printf("Average Grade: %.2f\n", average);
+        printf("Grades above 70: %d\n", above70);
+        printf("Grades between 50 and 70: %d\n", between50_70);
+        printf("Grades below 50: %d\n", below50);
+
+    } else {
+        printf("No grades were entered.\n");
+    }
+
+    return 0;
+}
+
