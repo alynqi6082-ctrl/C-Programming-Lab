@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+	int num,total=0;
+	char choice='y';
+	while( choice=='y' || choice=='Y' ){
+		printf("Enter a number: ");
+		scanf("%d",&num);
+		
+		total+=num;
+		printf("Total till now is: %d",total);
+		
+		printf("\nDo you want to continue(Y/N): ");
+		scanf(" %c",&choice);
+	}
+	printf("\nFinal total of all numbers: %d\n",total);
+
+    return 0;
+}
