@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+	int ib=5000;
+	int transaction=0;
+	int withdraw,deposit;
+	
+	while(1){
+		printf("Enter Amount For Transaction: ");
+		scanf("%d",&transaction);
+		
+		if(transaction == 0)
+			break;
+			
+		ib+=transaction;
+		
+		if(transaction > 0)
+			deposit++;
+		
+		if(transaction < 0)
+			withdraw++;
+	}
+	printf("Final Balance is: %d\n",ib);
+	printf("Total Deposits: %d\n", deposit);
+  printf("Total Withdrawals: %d\n", withdraw);
+    
+    return 0;
+}
