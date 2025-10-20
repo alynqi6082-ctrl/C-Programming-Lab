@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+    int n, i, index, newVal;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    for (i = 0; i < n; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+    printf("\nCurrent Array: ");
+    for (i = 0; i < n; i++) 
+	printf(" 3%d ", arr[i]);
+    
+	printf("\nEnter index to modify: ");
+    scanf("%d", &index);
+    
+    printf("\nEnter new value: ");
+    scanf("%d", &newVal);
+    arr[index] = newVal;
+    
+	printf("\nUpdated Array: ");
+    for (i = 0; i < n; i++) printf("%d ", arr[i]);
+    
+    return 0;
+}
