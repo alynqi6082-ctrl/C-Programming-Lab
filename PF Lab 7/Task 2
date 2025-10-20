@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int arr[10], i;
+    int even = 0, odd = 0;
+    int sumeven = 0, sumodd = 0;
+
+    printf("Enter 10 Integers: ");
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    for (i = 0; i < 10; i++) {
+        if (arr[i] % 2 == 0) {
+            sumeven += arr[i];
+            even = 1;
+        } else {
+            sumodd += arr[i];
+            odd = 1;
+        }
+    }
+
+    if (even)
+        printf("Sum of Even Numbers in array is: %d\n", sumeven);
+    else
+        printf("No Even Numbers\n");
+
+    if (odd)
+        printf("Sum of Odd Numbers in array is: %d\n", sumodd);
+    else
+        printf("No Odd Numbers\n");
+
+    return 0;
+}
+
