@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int scores[10] = {78, 85, 90, 67, 92, 88, 76, 81, 95, 69},temp,i,j;
+    for ( i = 0; i < 9; i++)
+        for ( j = i + 1; j < 10; j++)
+            if (scores[i] > scores[j]) {
+                temp = scores[i];
+                scores[i] = scores[j];
+                scores[j] = temp;
+        }
+ 
+    double median = (scores[4] + scores[5]) / 2.0;
+    printf("Scores Sorted In Ascending Order: ");
+    for (i = 0; i < 10; i++) 
+	printf("%d ", scores[i]);
+	
+    printf("\nMedian: %.2f\n", median);
+    return 0;
+}
