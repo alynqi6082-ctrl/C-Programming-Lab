@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100], ch;
+    int i, count = 0;
+
+    printf("Enter String: ");
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0'; 
+
+    printf("Enter the character you wish to search: ");
+    scanf(" %c", &ch); 
+
+    for (i = 0; i < strlen(str); i++) {
+        if (str[i] == ch) {
+            count++;
+        }
+    }
+
+    if (count > 0)
+        printf("The character '%c' appears %d times in the string.\n", ch, count);
+    else
+        printf("The character '%c' is not in the string.\n", ch);
+
+    return 0;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        h1 {
+            color: #00bcd4;
+            text-align: center;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        ul {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        ol{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            color: #13a838;
+        }
+        h2{
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+        <h1>My Personal Portfolio</h1>
+        <p style="text-align: center;">Welcome to my world of creativity and technology!</p>
+    
+        <h2><i>About Me</i></h2>
+        <p>Hello! My name is <b>Ali Naqi</b>. I am a Computer Science student passionate about web development and design. 
+        I enjoy creating modern, responsive, and interactive web pages.</p>
+
+        <img src="Fast.png" alt="My University" style="width:250px; border:3px solid #00bcd4; display:block; margin:10px auto;">
+
+        <h2 >My Skills</h2>
+        <ul>
+            <li style="color: orangered;">Web Development (HTML, CSS, JavaScript)</li>
+            <li style="color: orangered;">Programming (C, Python, Java)</li>
+            <li style="color: orangered;">Graphic Design (Canva, Figma)</li>
+        </ul>
+
+        <h2>Projects</h2>
+        <p>Here are some of my recent works:</p>
+        <ol>
+            <li style="color: crimson;">Personal Portfolio Website</li>
+            <li style="color: crimson;">Student Management System</li>
+            <li style="color: crimson;">Online Quiz Application</li>
+        </ol>
+
+        <h2>Contact Me</h2>
+        <p>If you’d like to collaborate or reach out, feel free to connect with me!</p>
+        <p>Email: <a href="alynqi.6082@gmail.com">alynqi.6082@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com" target="_blank">Visit My LinkedIn</a></p>
+
+</body>
+</html>
