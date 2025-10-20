@@ -1,1 +1,36 @@
 
+#include <stdio.h>
+
+int main() {
+    int arr[10], i, temp, sum = 0;
+
+    printf("Enter 10 Integers: ");
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("\nOriginal Array:");
+    for (i = 0; i < 10; i++) {
+        printf(" %d", arr[i]);
+    }
+
+    for (i = 0; i < 5; i++) {
+        temp = arr[i];
+        arr[i] = arr[9 - i];
+        arr[9 - i] = temp;
+    }
+
+    printf("\n\nReversed Array:");
+    for (i = 0; i < 10; i++) {
+        printf(" %d", arr[i]);
+    }
+
+    for (i = 0; i < 10; i++) {
+        sum += arr[i];
+    }
+
+    printf("\n\nSum of all integers in array is: %d\n", sum);
+
+    return 0;
+}
+
