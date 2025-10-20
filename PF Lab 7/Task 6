@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int nums[5], add[5], sub[5], mul[5], i;
+    for (i = 0; i < 5; i++) {
+        printf("Enter number %d: ", i + 1);
+        scanf("%d", &nums[i]);
+    }
+    for (i = 0; i < 5; i++) {
+        add[i] = nums[i] + 10;
+        sub[i] = nums[i] - 5;
+        mul[i] = nums[i] * 2;
+    }
+    printf("\nNumber\tAddition\tSubtraction\tMultiplication\n");
+    for (i = 0; i < 5; i++) printf("%d\t%d\t\t%d\t\t\t%d\n", nums[i], add[i], sub[i], mul[i]);
+    return 0;
+}
