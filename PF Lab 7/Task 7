@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    int ids[10], i, j, n = 10, removeID;
+    for (i = 0; i < n; i++) {
+        printf("Enter product ID %d: ", i + 1);
+        scanf("%d", &ids[i]);
+    }
+    printf("Enter ID to remove: ");
+    scanf("%d", &removeID);
+    for (i = 0; i < n; i++) {
+        if (ids[i] == removeID) {
+            for (j = i; j < n - 1; j++) 
+			ids[j] = ids[j + 1];
+            n--; i--;
+        }
+    }
+    printf("Updated IDs: ");
+    for (i = 0; i < n; i++) 
+	printf("%d ", ids[i]);
+    printf("\n");
+    return 0;
+}
