@@ -1,1 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int arr[3][3];
+    int i, j, sym = 1;
+
+    printf("Enter elements of 3x3 matrix:\n");
+    for(i=0; i<3; i++)
+        for(j=0; j<3; j++)
+            scanf("%d", &arr[i][j]);
+
+    printf("\nMatrix:\n");
+    for(i=0; i<3; i++){
+        for(j=0; j<3; j++)
+            printf("%d ", arr[i][j]);
+        printf("\n");
+    }
+
+    // Check symmetry
+    for(i=0; i<3; i++){
+        for(j=0; j<3; j++){
+            if(arr[i][j] != arr[j][i]){
+                sym = 0;
+                break;
+            }
+        }
+        if(!sym) break;
+    }
+
+    if(sym)
+        printf("\nThe matrix is Symmetric.\n");
+    else
+        printf("\nThe matrix is Not Symmetric.\n");
+
+    return 0;
+}
 
