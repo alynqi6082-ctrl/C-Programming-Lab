@@ -1,0 +1,39 @@
+#include <stdio.h>
+int main() {
+    int a[3][3];
+    int i, j;
+    int upper = 1, lower = 1;
+
+    printf("Enter elements of a 3x3 matrix:\n");
+    for (i = 0; i < 3; i++)
+        for (j = 0; j < 3; j++)
+            scanf("%d", &a[i][j]);
+
+    printf("\nMatrix:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++)
+            printf("%d ", a[i][j]);
+        printf("\t\n");
+    }
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            if (i > j && a[i][j] != 0)
+                upper = 0; 
+            if (i < j && a[i][j] != 0)
+                lower = 0; 
+        }
+    }
+
+    if (upper && !lower)
+        printf("\nIt is an Upper Triangular Matrix.\n");
+    else if (lower && !upper)
+        printf("\nIt is a Lower Triangular Matrix.\n");
+    else if (upper && lower)
+        printf("\nIt is both Upper and Lower Triangular (Diagonal Matrix).\n");
+    else
+        printf("\nIt is Neither Upper nor Lower Triangular.\n");
+
+    return 0;
+}
+
