@@ -1,1 +1,39 @@
 
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size of square matrix: ");
+    scanf("%d", &n);
+
+    int arr[n][n];
+    int mainSum = 0, secSum = 0, totalSum;
+
+    printf("Enter elements of %dx%d matrix:\n", n, n);
+    for(int i=0; i<n; i++)
+        for(int j=0; j<n; j++)
+            scanf("%d", &arr[i][j]);
+
+    printf("\nMatrix:\n");
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++)
+            printf("%d ", arr[i][j]);
+        printf("\n");
+    }
+
+    for(int i=0; i<n; i++){
+        mainSum += arr[i][i];               
+        secSum += arr[i][n-1-i];       
+    }
+
+    totalSum = mainSum + secSum;
+
+    if(n % 2 != 0)
+        totalSum -= arr[n/2][n/2];
+
+    printf("\nSum of Main Diagonal: %d", mainSum);
+    printf("\nSum of Secondary Diagonal: %d", secSum);
+    printf("\nTotal Sum of Both Diagonals: %d\n", totalSum);
+
+    return 0;
+}
+
