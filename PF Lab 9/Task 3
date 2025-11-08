@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+void displayMatrix(int arr[2][3]) {
+    printf("Matrix elements:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d\t", arr[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int calculateSum(int arr[2][3]) {
+    int sum = 0;
+    for (int i = 0; i < 2; i++)
+        for (int j = 0; j < 3; j++)
+            sum += arr[i][j];
+    return sum;
+}
+
+float calculateAverage(int arr[2][3]) {
+    int sum = calculateSum(arr);
+    return sum / 6.0; 
+}
+
+int findMax(int arr[2][3]) {
+    int max = arr[0][0];
+    for (int i = 0; i < 2; i++)
+        for (int j = 0; j < 3; j++)
+            if (arr[i][j] > max)
+                max = arr[i][j];
+    return max;
+}
+
+int main() {
+    int matrix[2][3] = {{5, 10, 15}, {20, 25, 30}};
+    
+    displayMatrix(matrix);
+    int sum = calculateSum(matrix);
+    float average = calculateAverage(matrix);
+    int max = findMax(matrix);
+
+    printf("Sum of matrix elements: %d\n", sum);
+    printf("Average of matrix elements: %.2f\n", average);
+    printf("Maximum element in the matrix: %d\n", max);
+
+    return 0;
+}
+
