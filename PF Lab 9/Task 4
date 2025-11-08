@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int findMax(int arr[], int size) {
+    int max = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > max)
+            max = arr[i];
+    }
+    return max;
+}
+
+int main() {
+    int data[] = {12, 45, 87, 110, 34};
+    int size = sizeof(data) / sizeof(data[0]);
+
+    int maxValue = findMax(data, size);
+    printf("The maximum value in the array is: %d\n", maxValue);
+
+    return 0;
+}
+
