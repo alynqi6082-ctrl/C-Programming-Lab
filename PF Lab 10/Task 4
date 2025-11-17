@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    FILE *fp;
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+
+    fp = fopen("library.txt", "w");
+    if (!fp) exit(1);
+    fprintf(fp, "%d\n%d\n%d\n", a, b, c);
+    fclose(fp);
+
+    fp = fopen("library.txt", "r");
+    if (!fp) exit(1);
+    fscanf(fp, "%d %d %d", &a, &b, &c);
+    fclose(fp);
+
+    printf("%d %d %d", a, b, c);
+    return 0;
+}
+
