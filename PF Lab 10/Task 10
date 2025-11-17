@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char names[5][20], search[20], temp[20];
+    FILE *fp;
+
+    for(int i=0;i<5;i++)
+        scanf("%s", names[i]);
+
+    fp = fopen("names.txt", "w");
+    for(int i=0;i<5;i++)
+        fprintf(fp, "%s\n", names[i]);
+    fclose(fp);
+
+    scanf("%s", search);
+
+    fp = fopen("names.txt", "r");
+    int found = 0;
+    while(fscanf(fp, "%s", temp) != EOF) {
+        if(strcmp(temp, search) == 0) {
+            found = 1;
+            break;
+        }
+    }
+    fclose(fp);
+
+    if(found)
+        printf("Name found in directory");
+    else
+        printf("Name not found");
+
+    return 0;
+}
+
