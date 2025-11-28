@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+void reverse(char str[], int index) {
+    if (index < 0)
+        return;
+
+    printf("%c", str[index]);
+    reverse(str, index - 1);
+}
+
+int main() {
+    char msg[100];
+
+    printf("Enter secret message: ");
+    gets(msg);
+
+    printf("Decoded message: ");
+    reverse(msg, strlen(msg) - 1);
+
+    return 0;
+}
+
